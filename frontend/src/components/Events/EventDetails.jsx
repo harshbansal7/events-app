@@ -102,7 +102,7 @@ const EventDetails = ({ event, open, onClose, isCreator, onUpdate }) => {
                 {event.image_url && (
                   <div className="w-full h-64 rounded-lg overflow-hidden">
                     <img
-                      src={event.image_url.startsWith('/') ? `http://localhost:5005${event.image_url}` : event.image_url}
+                      src={event.image_url.startsWith('/') ? `${import.meta.env.VITE_API_URL}${event.image_url}` : event.image_url}
                       alt={event.name}
                       className="w-full h-full object-cover"
                     />
