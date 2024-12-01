@@ -12,7 +12,7 @@ const EditEventForm = ({ editedEvent, setEditedEvent, event, error }) => {
         {event.image_url && (
           <div className="relative w-full h-48 rounded-lg overflow-hidden">
             <img
-              src={event.image_url.startsWith('/') ? `${import.meta.env.STATIC_URL}${event.image_url}` : event.image_url}
+              src={event.image_url.startsWith('/') ? `${STATIC_URL}${event.image_url}` : event.image_url}
               alt={event.name}
               className="w-full h-full object-cover"
             />

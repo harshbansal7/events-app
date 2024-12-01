@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { format } from 'date-fns';
-import { registerForEvent, deleteEvent, getCurrentUserId, unregisterFromEvent } from '../../services/api';
+import {STATIC_URL, registerForEvent, deleteEvent, getCurrentUserId, unregisterFromEvent } from '../../services/api';
 import EventDetails from './EventDetails';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
@@ -20,7 +20,7 @@ const EventCard = ({ event, onRegister, onDelete, onUnregister }) => {
       return 'https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75';
     }
     if (imageUrl.startsWith('/')) {
-      return `${import.meta.env.STATIC_URL}${imageUrl}`;
+      return `${STATIC_URL}${imageUrl}`;
     }
     return imageUrl;
   };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { format } from 'date-fns';
-import { updateEvent } from '../../services/api';
+import { STATIC_URL, updateEvent } from '../../services/api';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
@@ -102,7 +102,7 @@ const EventDetails = ({ event, open, onClose, isCreator, onUpdate }) => {
                 {event.image_url && (
                   <div className="w-full h-64 rounded-lg overflow-hidden">
                     <img
-                      src={event.image_url.startsWith('/') ? `${import.meta.env.STATIC_URL}${event.image_url}` : event.image_url}
+                      src={event.image_url.startsWith('/') ? `${STATIC_URL}${event.image_url}` : event.image_url}
                       alt={event.name}
                       className="w-full h-full object-cover"
                     />
