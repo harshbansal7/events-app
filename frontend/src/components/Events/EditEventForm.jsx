@@ -3,7 +3,7 @@ import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { CameraIcon, XMarkIcon } from '@heroicons/react/24/outline';
-
+import { STATIC_URL } from '../../services/api';
 const EditEventForm = ({ editedEvent, setEditedEvent, event, error }) => {
   return (
     <div className="space-y-6">
