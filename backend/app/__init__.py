@@ -34,7 +34,7 @@ def create_app():
         r"/api/*": {
             "origins": [
                 "http://localhost:3000",
-                "https://your-frontend-domain.vercel.app"
+                "https://amityevents.vercel.app"
             ],
             "methods": ["GET", "POST", "PUT", "DELETE"],
             "allow_headers": ["Content-Type", "Authorization"]
